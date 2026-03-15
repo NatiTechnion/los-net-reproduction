@@ -1,0 +1,4 @@
+,meta-llama/Meta-Llama-3-8B-Instruct,mistralai/Mistral-7B-Instruct-v0.2,Qwen/Qwen2.5-7B-Instruct
+meta-llama/Meta-Llama-3-8B-Instruct,0.7192 ± 0.0061,0.6925 ± 0.0116,0.7022 ± 0.0027
+mistralai/Mistral-7B-Instruct-v0.2,0.6537 ± 0.0015,0.7423 ± 0.0012,0.7184 ± 0.0045
+Qwen/Qwen2.5-7B-Instruct,0.6530 ± 0.0005,0.7116 ± 0.0012,0.7574 ± 0.0020

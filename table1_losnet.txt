@@ -1,0 +1,4 @@
+LLM     Llama3-8b-instruct                             Mistral-7b-instruct                               Qwen-2.5-7b                            
+Dataset           HotpotQA          IMDB        Movies            HotpotQA          IMDB        Movies      HotpotQA          IMDB        Movies
+Method                                                                                                                                          
+LOS-Net       72.33 ± 0.52  90.71 ± 0.89  77.45 ± 0.73        73.16 ± 0.68  94.03 ± 0.64  71.91 ± 0.43  75.73 ± 1.74  88.92 ± 0.92  86.23 ± 0.29

@@ -1,0 +1,74 @@
+program: ./main.py 
+
+method: random
+
+metric:
+  name: best_val_AUC
+  goal: maximize
+
+parameters:
+  # --------------------------------------------------
+  # THE EXTENDED RUN SETTINGS
+  # --------------------------------------------------
+  num_epochs:
+    values: [1000]
+  patience:
+    values: [100]
+  seed:
+    values: [42]
+
+  # --------------------------------------------------
+  # THE TRIMMED HYPERPARAMETER SEARCH SPACE
+  # --------------------------------------------------
+  batch_size:
+    values: [32, 64, 128]
+  lr:
+    values: [5e-4, 1e-4, 5e-5, 1e-5]
+  weight_decay:
+    values: [0.0]                 # LOCKED to zero to density the search
+  dropout:
+    values: [0.0, 0.3, 0.5]       # TRIMMED extreme 0.7
+  heads:
+    values: [4, 8, 16]
+  hidden_dim:
+    values: [128, 256, 512]       # KEPT 512 to test higher capacity
+  num_layers:
+    values: [1, 2]                # TRIMMED 3rd layer
+
+  # --------------------------------------------------
+  # STANDARD ARCHITECTURE & PATH SETTINGS
+  # --------------------------------------------------
+  probe_model:
+    values: ["LOS-Net"]
+  pool:
+    values: ["cls"]
+  train_dataset:
+    values: ["imdb"]              # SWAPPED TO IMDB
+  test_dataset:
+    values: ["imdb_test"]         # SWAPPED TO IMDB
+  input_type:
+    values: ["LOS"]
+  input_output_type:
+    values: ["output"]
+  topk_preprocess:
+    values: [1_000]
+  topk_dim:
+    values: [1_000]
+  rank_encoding:
+    values: ["scale_encoding"]
+  num_workers:
+    values: [0]
+  pin_memory:
+    values: [0]
+  num_folds:
+    values: [5]
+  fold_to_run:
+    values: [0]
+  best_model_path:
+    values: ["saved_models"]
+  base_pre_processed_data_dir:
+    values: ['/workspace/DL/proj/Beyond-next-token-probabilities/preproc_data']
+  LLM:
+    values: ['mistralai/Mistral-7B-Instruct-v0.2']
+  cuda_idx:
+    values: [0]

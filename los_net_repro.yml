@@ -1,0 +1,55 @@
+name: LOS_Net
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  # Core
+  - python=3.10
+  - pip
+  - numpy=1.26.4
+
+  # PyTorch + CUDA (critical)
+  - pytorch=2.2.0
+  - torchvision=0.17.0
+  - torchaudio
+  - pytorch-cuda=12.1
+
+  # Scientific stack (non-problematic via conda)
+  - scipy=1.14.1
+  - scikit-learn=1.5.2
+  - pandas=2.2.3
+
+  # Jupyter
+  - jupyter
+  - ipykernel
+
+  # Pip packages (matches original environment)
+  - pip:
+      - torch==2.2.0
+      - triton==2.2.0
+      - accelerate==0.27.0
+      - transformers==4.42.3
+      - datasets==3.1.0
+      - huggingface-hub==0.26.2
+      - tokenizers==0.19.1
+      - safetensors==0.4.5
+
+      - matplotlib==3.9.2
+      - seaborn==0.13.2
+
+      - tqdm==4.66.5
+      - einops==0.8.0
+      - vit-pytorch==1.8.9
+      - git+https://github.com/davidbau/baukit.git
+      - wandb==0.15.12
+
+      - pillow==11.0.0
+      - pyarrow==18.0.0
+      - pyyaml==6.0.2
+
+      - aiohttp==3.11.2
+      - fsspec==2024.9.0
+      - multiprocess==0.70.16
+      - dill==0.3.8
+      - regex==2024.11.6
