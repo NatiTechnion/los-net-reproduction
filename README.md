@@ -63,9 +63,9 @@ Example run:
 
 For example, if you use an NVIDIA GPU at index 1, change row 305 of that file to ```device = "cuda:1"```. Default value is ```cuda:0```.
 
-6. Run the sweep you would like to run with its corresponding script:
+6. Run the sweep you would like to run with its corresponding sweep file:
 
-```wandb sweep --project [WANDB_PROJECT_NAME] [SWEEP]```
+```wandb sweep --project [WANDB_PROJECT_NAME] [SWEEP_FILE]```
 
 For example, the following command executes the main runs of the original paper for ```meta/movies```:
 
