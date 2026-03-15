@@ -2,7 +2,7 @@ import wandb
 import pandas as pd
 
 api = wandb.Api()
-runs = api.runs("natipro/LOS-Net-Transferability")
+runs = api.runs("natipro/LOS-Net-ATP")
 
 data = []
 
